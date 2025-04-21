@@ -22,7 +22,7 @@ required:true
        required:true 
       },
       image: {
-        type: 'string',
+        type: 'image',
        required:true 
       },
       isPublished: {
