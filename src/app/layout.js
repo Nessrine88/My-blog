@@ -18,8 +18,9 @@ export default function RootLayout({ children }) {
       <body className = {cx(inter.variable, manrope.variable, "font-mr bg-light ")}>
       <Header />
         {children}
-        </body>
         <Footer />
+        </body>
+     
     </html>
   )
 }
