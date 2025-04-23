@@ -6,7 +6,7 @@ import { format } from 'date-fns'
 
 const BlogLayoutTwo = ({blog}) => {
   return (
-    <div className='grid grid-cols-12 gap-4 items-center text-dark '>
+    <div className='group grid grid-cols-12 gap-4 items-center text-dark '>
         <Link href={blog.url} className='col-span-4 h-full rounded-xl overflow-hidden'>
             <Image src={blog.image.filePath.replace("../public","")} placeholder='blur'
                   blurDataURL={blog.image.blurhashDataUrl} 
@@ -20,8 +20,8 @@ const BlogLayoutTwo = ({blog}) => {
        
        <span className='uppercase text-accent font-semibold text-sm'>{blog.tags[0]}</span>
        <Link href={blog.url} className='inline-block'>
-       <h2 className='font-semibold capitalize text-lg text-light mt-4'>
-           <span className='bg-gradient-to-r from-accent/50 to-accent/50 bg-[length:0px_6px] hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 '>
+       <h2 className='font-semibold capitalize text-lg  mt-4'>
+           <span className='bg-gradient-to-r from-accent/50 to-accent/50 bg-[length:0px_6px] group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500 '>
 
            {blog.title} 
            </span>

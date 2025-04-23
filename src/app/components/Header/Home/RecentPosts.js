@@ -14,7 +14,7 @@ const RecentPosts = ({blogs}) => {
         <h2 className='inline-block font-bold capitalize text-4xl'>Recent Posts</h2>
         <Link href="/categories/all" className='iniline-block font-medium text-accent underline underline-offset-2 text-lg'>View all</Link>
         </div>
-        <div className='grid grid-cols-3 gap-16 mt-16 grid-rows-3'>
+        <div className='grid grid-cols-3 gap-16 mt-16 grid-rows-2'>
         {
             sortedBlogs.slice(5,11).map((blog, index)=> (
                     <article className='col-span-1 row-span-1 relative'> {<BlogLayoutThree blog={blog} />} </article>
