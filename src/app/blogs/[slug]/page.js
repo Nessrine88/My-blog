@@ -8,6 +8,9 @@ import RenderMdx from "../RenderMdx";
 import { slug } from "github-slugger";
 
 
+export async function generateStacticParams(){
+  return allBlogs.map((blog) => ({slug:blog._raw.flattenedPath  }));
+}
 
 export default function BlogPage({ params }) {
   const blog = allBlogs.find((b) => b._raw.flattenedPath === params.slug);
