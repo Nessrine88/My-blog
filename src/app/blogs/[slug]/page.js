@@ -61,18 +61,11 @@ export default function BlogPage({ params }) {
     >
       <summary className="text-lg font-semibold capitalize cursor-pointer">Table Of Content</summary>
       <ul className="mt-4 font-in text-base">
-      {blog.toc.map((heading) => {
-  return (
+  {blog.toc.map((heading) => (
     <li key={`#${heading.slug}`} className="py-1">
       <a
         href={`#${heading.slug}`}
-        data-level={
-          heading.level === 2
-            ? "two"
-            : heading.level === 3
-            ? "three"
-            : undefined
-        }
+        data-level={heading.level}
         className={`
           data-[level="two"]:pl-0 
           data-[level="two"]:pt-2 
@@ -82,16 +75,15 @@ export default function BlogPage({ params }) {
           flex items-center justify-start
         `}
       >
-        {heading.level === 3 ? (
+        {heading.level === "three" && (
           <span className="flex w-1 h-1 rounded-full bg-dark mr-2"> &nbsp; </span>
-        ) : null}
+        )}
         <span className="hover:underline">{heading.text}</span>
       </a>
     </li>
-  );
-})}
+  ))}
+</ul>
 
-      </ul>
     </details>
   </div>
 
